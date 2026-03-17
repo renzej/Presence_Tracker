@@ -1,0 +1,24 @@
+﻿@using Presence.Web.Helpers
+@model List<Event>
+
+<h1>Events List</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var eventItem in Model.OrderBy(u=>u.Date))
+        {
+            <tr>
+                <td>@eventItem.Name</td>
+                <td>@eventItem.Date.ToString("yyyy-MM-dd")</td>
+                <td>@eventItem.Type.GetDisplayName()</td>
+            </tr>
+        }
+    </tbody>
+</table>
