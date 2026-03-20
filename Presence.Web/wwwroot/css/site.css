@@ -3,12 +3,18 @@ body {
 }
 
 /*Sidebar Styles*/
+.brand-link span {
+    font-weight: 500;
+    font-family: "Encode Sans SC", sans-serif;
+}
+
 .nav-sidebar .nav-link {
-    font-size: 0.95rem;
+    font-size: 0.90rem;
     font-weight: 300;
 }
 
 .nav-sidebar .nav-icon {
     vertical-align: middle;
     position: relative;
+    top: -1px;
 }
