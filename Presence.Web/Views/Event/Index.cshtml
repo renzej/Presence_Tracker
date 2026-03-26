@@ -3,22 +3,20 @@
 
 <h1>Events List</h1>
 
-<table>
+<table id="tblData" class="table table-bordered table-hover w-100">
     <thead>
-        <tr>
-            <th>Name</th>
+        <tr class="text-uppercase">
             <th>Date</th>
+            <th>Time</th>
+            <th>Event</th>
             <th>Type</th>
+            <th>Status</th>
+            <th></th>
         </tr>
     </thead>
-    <tbody>
-        @foreach (var eventItem in Model.OrderBy(u=>u.Date))
-        {
-            <tr>
-                <td>@eventItem.Name</td>
-                <td>@eventItem.Date.ToString("yyyy-MM-dd")</td>
-                <td>@eventItem.Type.GetDisplayName()</td>
-            </tr>
-        }
-    </tbody>
+    <tbody></tbody>
 </table>
+
+@section Scripts {
+    <script src="~/js/event.js"></script>
+}

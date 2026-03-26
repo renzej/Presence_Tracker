@@ -17,9 +17,10 @@ namespace Presence.Web.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Event>().HasData(
-                new Event { Id = 1, Name = "March Prayer Meeting", Date = new DateTime(2026, 3, 18), Type = EventType.PrayerMeeting },
-                new Event { Id = 2, Name = "Church Service", Date = new DateTime(2026, 3, 22), Type = EventType.ChurchService },
-                new Event { Id = 3, Name = "Band Practice", Date = new DateTime(2026, 3, 20), Type = EventType.Other }
+                new Event { Id = 1, Name = "March Prayer Meeting", StartDateTime = new DateTime(2025, 3, 5, 18, 0, 0), EndDateTime = new DateTime(2025, 3, 5, 20, 0, 0), Type = EventType.PrayerMeeting, Status = EventStatus.Completed },
+                new Event { Id = 2, Name = "Brother CJ Sermon", StartDateTime = new DateTime(2025, 3, 9, 9, 0, 0), EndDateTime = new DateTime(2025, 3, 9, 12, 0, 0), Type = EventType.ChurchService, Status = EventStatus.Completed },
+                new Event { Id = 3, Name = "Brother Jan Sermon", StartDateTime = new DateTime(2025, 3, 16, 9, 0, 0), EndDateTime = new DateTime(2025, 3, 16, 12, 0, 0), Type = EventType.ChurchService, Status = EventStatus.Completed },
+                new Event { Id = 4, Name = "Band Practice", StartDateTime = new DateTime(2025, 3, 20, 17, 0, 0), Type = EventType.Other, Status = EventStatus.Completed }
             );
         }
     }
