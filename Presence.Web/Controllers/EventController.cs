@@ -24,7 +24,8 @@ namespace Presence.Web.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var events = _db.Events.ToList().Select(e => new {
+            var events = _db.Events.ToList();
+            var data = events.Select(e => new {
                 id = e.Id,
                 name = e.Name,
                 startDateTime = e.StartDateTime,
@@ -33,7 +34,7 @@ namespace Presence.Web.Controllers
                 status = e.Status.GetDisplayName()
             });
 
-            return Json(new { data = events });
+            return Json(new { data = data });
         }
         #endregion
     }

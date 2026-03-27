@@ -1,21 +1,24 @@
 ﻿@using Presence.Web.Helpers
-@model List<Event>
 
-<h1>Events List</h1>
-
-<table id="tblData" class="table table-bordered table-hover w-100">
-    <thead>
-        <tr class="text-uppercase">
-            <th>Date</th>
-            <th>Time</th>
-            <th>Event</th>
-            <th>Type</th>
-            <th>Status</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody></tbody>
-</table>
+<div class="container-fluid px-0">
+    <div class="row justify-content-center">
+        <div class="col-12 col-xl-11 mt-5">
+            <table id="eventsTable" class="table table-hover w-100">
+                <thead>
+                    <tr class="text-uppercase">
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Event</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
 @section Scripts {
     <script src="~/js/event.js"></script>
